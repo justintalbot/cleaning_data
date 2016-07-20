@@ -63,18 +63,18 @@ this decision is given at the end of the variable description.
 They are coded as follows: 
 
 1. Each variable starts with a t or an f.
-    t denotes time
-    f denotes frequency domain signals
+    * t denotes time
+    * f denotes frequency domain signals
 
 2. There are 9 different measurements that are a combination of the following. 
-   Acc - results obtained from the accelerometer. 
-   Gyro - results obtained from the gyroscope.
-   Body - measures the body acceleration
-   Gravity - measures the gravity acceleration
-   Jerk - the linear acceleration and angular velocity 
-   Mag - the magnitude of the jerk signals using the Euclidian norm
+   * Acc - results obtained from the accelerometer. 
+   * Gyro - results obtained from the gyroscope.
+   * Body - measures the body acceleration
+   * Gravity - measures the gravity acceleration
+   * Jerk - the linear acceleration and angular velocity 
+   * Mag - the magnitude of the jerk signals using the Euclidian norm
    
-   These are combined to create the following variables
+These are combined to create the following variables
                
     1. BodyAcc
     2. GravityAcc     
@@ -87,17 +87,17 @@ They are coded as follows:
     9. BodyGyroJerkMag  
 
 3. The calculation done to the measurement		
-    mean() - the average of the variable
-    std() - the standard deviation of the variable
+    * mean() - the average of the variable
+    * std() - the standard deviation of the variable
 
 4. XYZ denotes the three axial signals in either direction X, Y, or Z
 
 ### An example of one of the variables
-tBodyAcc-mean()-Z
+* tBodyAcc-mean()-Z
 
-The t tells us we are looking at measurements of time
-BodyAcc tells us we are measuring the time it takes the body to accelerate in the performed activity
-mean() tells us this is the average of the body acceleration for the exercise
-Z tells us we are seeing the axial signal in the Z direction
+* The t tells us we are looking at measurements of time
+* BodyAcc tells us we are measuring the time it takes the body to accelerate in the performed activity
+* mean() tells us this is the average of the body acceleration for the exercise
+* Z tells us we are seeing the axial signal in the Z direction
 
-To recode each measurement based on the above parameters would complicate things tremendously and introduce many NA's to an otherwise clean dataset.
+To recode each measurement based on the above parameters would complicate things tremendously and introduce many NA's to an otherwise clean dataset. It would also substantially lengthen the amount of rows. 
