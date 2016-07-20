@@ -1,11 +1,15 @@
-# How the data was transformed and cleaned
+# The data
 
-The original dataset was obtained here: 
+The original dataset can be found here: 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-It shows...
+The data is obtained from smartphones that participants wore on their wrists while performing six different movements. There were 30 participants in all ranging in age from 19-48 years old. 
 
-### The following files were read into R using read.table():
+The original data was messy and needed to be combined so it could be used for further analysis. For our purposes, we were only interested in the features that measured the standard deviation and the mean. First, I will describe how the data was cleaned. Then, I will explain the variables and their levels. 
+
+## How the data was transformed and cleaned
+
+* The following files were read into R using read.table():
 
 1. features.txt - this has the names of all features 
 2. y_train.txt - this has the coded activities for the training set
@@ -41,16 +45,16 @@ down by activity.
 
 The first two variables are:
 
-Subject_ID - This is a categorical variable that lists the subjects by ID number ranging from 1-30               
+1. Subject_ID - This is a categorical variable that lists the subjects by ID number ranging from 1-30               
 
-Activity - This is a categorical variable that states the activity that the subjects performed. 
-           It is broken down into 6 self explanatory levels.
-	        1. Laying
-		2. Sitting
-		3. Standing
-		4. Walking
-		5. WalkingDownstairs
-		6. WalkingUpstairs
+2. Activity - This is a categorical variable that states the activity that the subjects performed. 
+   It is broken down into 6 self explanatory levels.
+	1. Laying
+	2. Sitting
+	3. Standing
+	4. Walking
+	5. WalkingDownstairs
+	6. WalkingUpstairs
 
 
 Given the complexity of the variable titles obtained from the frequency file, they were left as is. Further justification for 
@@ -88,7 +92,7 @@ They are coded as follows:
 
 4. XYZ denotes the three axial signals in either direction X, Y, or Z
 
-An example of one of the variables
+### An example of one of the variables
 tBodyAcc-mean()-Z
 
 The t tells us we are looking at measurements of time
