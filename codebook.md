@@ -1,8 +1,11 @@
-How the data was transformed and cleaned
+# How the data was transformed and cleaned
 
-The original dataset was obtained found here: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+The original dataset was obtained here: 
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-The following files were read into R using read.table():
+It shows...
+
+### The following files were read into R using read.table():
 
 1. features.txt - this has the names of all features 
 2. y_train.txt - this has the coded activities for the training set
@@ -12,29 +15,29 @@ The following files were read into R using read.table():
 6. subject_test.txt - this has the subject ID's for the test set
 7. y_test.txt - this has the coded activities for the test set
 
-After reading in the tables the features were assigned to a variable and then added
+* After reading in the tables the features were assigned to a variable and then added
 to both the X_train dataset and the X_test dataset as column names
 
-The activity and subject datasets for both the test and trainging data were then 
+* The activity and subject datasets for both the test and trainging data were then 
 given variable names, Activity and Subject_ID respectively.
 
-Next, all columns for both the training and test set were removed except for those 
+* Next, all columns for both the training and test set were removed except for those 
 that were either measuring mean() or std()
 
-The columns for activity and subject_id were added to the test and training data
+* The columns for activity and subject_id were added to the test and training data
 
-Then, the test and training datsets were merged to create one dataset.
+* Then, the test and training datsets were merged to create one dataset.
 
-Next, the activity column was recoded to have more descriptive names.
+* Next, the activity column was recoded to have more descriptive names.
 
-Finally, the full dataset was grouped by subject and activity and the average of 
+* Finally, the full dataset was grouped by subject and activity and the average of 
 each column was found. This gives us the average value for each subject broken
 down by activity. 
 
-The two cleaned datasets are then saved as csv files. 
+* The two cleaned datasets are then saved as csv files. 
 
 
-Description of Variables
+## Description of Variables
 
 The first two variables are:
 
