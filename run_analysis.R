@@ -72,9 +72,12 @@ sub_act <- full %>%
   group_by(Subject_ID, Activity) %>%
   summarise_each(funs(mean))
 
-# Finally, the two cleaned datasets are saved as csv files and written to the working directory
-write.csv(full, "mean_and_std.csv")
-write.csv(sub_act, "activity_and_subject.csv")
+# Finally, the two cleaned datasets are saved as csv files and written to the working directory. I commented these out to meet 
+# the requirements of the assignment, which creates a .txt file instead
+
+# write.csv(full, "mean_and_std.csv")
+# write.csv(sub_act, "activity_and_subject.csv")
+write.table(sub_act, "activity_and_subject.txt", row.names = FALSE)
 
 
 
